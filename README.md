@@ -74,4 +74,17 @@ Install epseak, speechRecoginition and text to speech library (pyttsx3) librarie
 
 `pip install pyttsx3`
 
+Now, to train and create an AI chatbot based on a custom knowledge base, we need to get an API key from OpenAI. The API key will allow you to use OpenAI’s model as the LLM to study your custom data and draw inferences.
+
+The Chat GPT library needs to be configured with an account's secret key which is available on the website. Set the api key OPENAI_API_KEY. This API key let you  use OpenAI’s model as the LLM for any  custom data and draw inferences.
+
+`os.environ["OPENAI_API_KEY"] = 'YOUR API KEY'`
+
+Copy the custom data documents on a specific directory on Raspberry pi. e.g., /home/pi/Documents
+
+<img width="396" alt="Screen Shot 2023-06-15 at 4 25 48 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/3459c9f0-073f-489f-bf7f-4ae46e2cff13">
+
+Run voice_assistant.py and the code should work!
+
+
 
