@@ -1,6 +1,8 @@
 # Smart-Sales-Assistant
 Raspberry Pi can be used to build a voice assistant on custom data by using ChatGPT and Whisper APIs from OpenAI. 
 
+<img width="300" alt="Screen Shot 2023-07-22 at 4 24 21 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/4d07d64f-35b5-46a0-886c-18d41d39a79a">
+
 Hardware components:
 Raspberry Pi, Micro SD Card, Power Supply, USB Speaker, USB Microphone
 
@@ -11,38 +13,43 @@ Software Apps: Python, ChatGPT, Whisper, Speech Recognition, Pysttx3 libraries
 
 Raspberry pi operating system needs to be installed on a micro SD card before installing any ChatGPT based libraries. Raspberry Pi Imager (scroll down from the website https://www.raspberrypi.com/software/) running on another computer can be used to copy the operating system into the SD card.
 
-<img width="327" alt="Screen Shot 2023-06-15 at 4 17 36 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/1adc0604-9bd4-4b18-bdf5-2250525f5baa">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 18 32 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/f9145019-8340-44ac-8ee4-fb6b677a5019">
 
 Click on 'CHOOSE OS' button and select Raspberry Pi OS (64-bit) option and select 'WRITE' button to install the operating system on the SD card.
 
-<img width="328" alt="Screen Shot 2023-06-15 at 4 18 04 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/46c71fb5-05ca-45bd-8ac1-f7c8e82c8c1e">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 19 57 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/08e99e6f-cc39-41ca-b7a8-3c230007cab9">
 
 After installing Raspberry pi os on SD card, it can be inserted into Raspberry pi and connect to Monitor and keyboard for installing the required voice assistant integrations. First setup username and password.
 
-<img width="322" alt="Screen Shot 2023-06-15 at 4 18 28 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/507a6d00-2917-46ab-928a-bc13bf84878f">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 20 30 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/72a950b6-5a05-4c17-a812-0db222e73306">
+
+<img width="400" alt="Screen Shot 2023-07-22 at 4 20 52 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/3696bd6b-595a-4fce-b55b-6c7af7f0f877">
 
 Select Preferences -> Raspberry Pi Configuration.
 
-<img width="455" alt="Screen Shot 2023-06-15 at 4 18 39 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/d4bcd894-f34c-4900-923c-34c14ace5c96">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 21 14 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/6a032fee-f750-4cc3-8f7b-49118776a2ab">
 
 Click on the Interfaces tab and select SSH and VNC. These options will enable you to access Raspberry pi remotely using SSH or VNC.
 
-<img width="409" alt="Screen Shot 2023-06-15 at 4 18 56 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/4a181476-df20-4192-9eb6-6b17b140a671">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 21 27 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/55106555-6dea-49a0-b0aa-64bd7c45c94a">
 
 Advanced configurations can be set using raspi-config comand on the Terminal.
 
 `sudo raspi-config`
 
 Select System -> Audio -> USB Audio
-<img width="417" alt="Screen Shot 2023-06-15 at 4 20 23 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/11fb1f77-2185-477c-8983-b3fb3ee120d4">
 
-<img width="426" alt="Screen Shot 2023-06-15 at 4 20 35 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/b5786e49-71de-4871-8ab0-2ee39d33f65e">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 21 49 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/df705bc0-7c66-4c54-8449-101dad87e299">
 
-<img width="437" alt="Screen Shot 2023-06-15 at 4 20 47 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/ffa38a42-ed98-4d9d-b483-0839b64e44b7">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 22 06 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/6556e44a-2457-4109-9a2c-1bc5282a6988">
+
+<img width="300" alt="Screen Shot 2023-07-22 at 4 22 21 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/de88fdb2-93da-4342-a37c-2b497d2a1750">
+
 
 Sound settings can be modified using alsamixer command on the Termial.
 
-<img width="391" alt="Screen Shot 2023-06-15 at 4 21 03 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/a2cf04ec-e354-40a9-9b71-901d9a4a92fe">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 22 53 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/8127cba2-4173-4263-8a64-70a705bdd361">
+
 
 Install openai library and then install gpt_index which is also known as LlamaIndex (GPT Index) is a project that provides a central interface to connect your LLM's with external data. Install PyPDF2 library which can be used for processing PDF files.
 
@@ -82,7 +89,7 @@ The Chat GPT library needs to be configured with an account's secret key which i
 
 Copy the custom data documents on a specific directory on Raspberry pi. e.g., /home/pi/Documents
 
-<img width="396" alt="Screen Shot 2023-06-15 at 4 25 48 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/3459c9f0-073f-489f-bf7f-4ae46e2cff13">
+<img width="400" alt="Screen Shot 2023-07-22 at 4 23 43 PM" src="https://github.com/arunjo5/Smart-Sales-Assistant/assets/136642643/5cc3c237-68fa-43bf-a6f4-4d061d80dbf6">
 
 Run voice_assistant.py and the code should work!
 
